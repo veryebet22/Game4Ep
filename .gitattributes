@@ -1,0 +1,25 @@
+# Normalise text files to LF in the repository, CRLF in the working copy.
+* text=auto
+
+# GitHub Actions YAML must stay LF.
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+# Audio assets are binary. Explicitly disable any line-ending or diff
+# processing so an 80 MB music folder can never be silently mangled by
+# autocrlf on checkout/commit.
+*.mp3   binary
+*.m4a   binary
+*.flac  binary
+*.wav   binary
+*.ogg   binary
+*.aac   binary
+
+# Image / misc binary assets.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.pdf   binary
